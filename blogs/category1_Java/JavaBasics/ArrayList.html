@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ArrayList | MyBlog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="lpy的个人博客">
+    
+    <link rel="preload" href="/assets/css/0.styles.cdd75a34.css" as="style"><link rel="preload" href="/assets/js/app.73686183.js" as="script"><link rel="preload" href="/assets/js/4.3efebf8f.js" as="script"><link rel="preload" href="/assets/js/1.8004d325.js" as="script"><link rel="preload" href="/assets/js/11.5bf7944f.js" as="script"><link rel="prefetch" href="/assets/js/10.dac11965.js"><link rel="prefetch" href="/assets/js/12.76382749.js"><link rel="prefetch" href="/assets/js/13.e84cd943.js"><link rel="prefetch" href="/assets/js/14.05e3b106.js"><link rel="prefetch" href="/assets/js/15.35c528e9.js"><link rel="prefetch" href="/assets/js/16.257c22b4.js"><link rel="prefetch" href="/assets/js/17.1f6cf13f.js"><link rel="prefetch" href="/assets/js/18.1f397961.js"><link rel="prefetch" href="/assets/js/19.0fb9ee73.js"><link rel="prefetch" href="/assets/js/20.4ae90a89.js"><link rel="prefetch" href="/assets/js/21.560cdb07.js"><link rel="prefetch" href="/assets/js/22.28a44fd4.js"><link rel="prefetch" href="/assets/js/23.95e91150.js"><link rel="prefetch" href="/assets/js/24.e4e0cf95.js"><link rel="prefetch" href="/assets/js/25.c6be26b1.js"><link rel="prefetch" href="/assets/js/26.4d474441.js"><link rel="prefetch" href="/assets/js/27.eb5c96c7.js"><link rel="prefetch" href="/assets/js/28.a4e3d013.js"><link rel="prefetch" href="/assets/js/29.c2388121.js"><link rel="prefetch" href="/assets/js/3.849d60f4.js"><link rel="prefetch" href="/assets/js/30.412329a4.js"><link rel="prefetch" href="/assets/js/31.c4dd1db2.js"><link rel="prefetch" href="/assets/js/32.b8988104.js"><link rel="prefetch" href="/assets/js/33.3e07657d.js"><link rel="prefetch" href="/assets/js/34.6429f51c.js"><link rel="prefetch" href="/assets/js/35.1557d561.js"><link rel="prefetch" href="/assets/js/36.a9c5e18c.js"><link rel="prefetch" href="/assets/js/37.d540d0fd.js"><link rel="prefetch" href="/assets/js/38.ce0bfafc.js"><link rel="prefetch" href="/assets/js/39.a3c1eacc.js"><link rel="prefetch" href="/assets/js/40.0927b31b.js"><link rel="prefetch" href="/assets/js/41.c3d0786e.js"><link rel="prefetch" href="/assets/js/42.a28d9f8d.js"><link rel="prefetch" href="/assets/js/43.7557d48e.js"><link rel="prefetch" href="/assets/js/44.d3093a6d.js"><link rel="prefetch" href="/assets/js/45.72eb5ebc.js"><link rel="prefetch" href="/assets/js/46.3075d72c.js"><link rel="prefetch" href="/assets/js/47.9ae50afc.js"><link rel="prefetch" href="/assets/js/48.84dc5d72.js"><link rel="prefetch" href="/assets/js/49.1ebead88.js"><link rel="prefetch" href="/assets/js/5.00fd8006.js"><link rel="prefetch" href="/assets/js/50.7a84e8b6.js"><link rel="prefetch" href="/assets/js/51.a6bf4c6d.js"><link rel="prefetch" href="/assets/js/52.ad43e468.js"><link rel="prefetch" href="/assets/js/53.bc115267.js"><link rel="prefetch" href="/assets/js/54.31931485.js"><link rel="prefetch" href="/assets/js/55.af939ae0.js"><link rel="prefetch" href="/assets/js/56.7aa64fb7.js"><link rel="prefetch" href="/assets/js/57.a7a777ed.js"><link rel="prefetch" href="/assets/js/58.25e49533.js"><link rel="prefetch" href="/assets/js/59.fb11d3ac.js"><link rel="prefetch" href="/assets/js/6.70c6e3b6.js"><link rel="prefetch" href="/assets/js/60.a8da3802.js"><link rel="prefetch" href="/assets/js/61.648f0a87.js"><link rel="prefetch" href="/assets/js/62.14bb88a7.js"><link rel="prefetch" href="/assets/js/63.0ea7074f.js"><link rel="prefetch" href="/assets/js/64.f98cfa50.js"><link rel="prefetch" href="/assets/js/65.b46e8138.js"><link rel="prefetch" href="/assets/js/66.725ae391.js"><link rel="prefetch" href="/assets/js/67.3cef4455.js"><link rel="prefetch" href="/assets/js/68.1c4f2ee0.js"><link rel="prefetch" href="/assets/js/69.3d44c45d.js"><link rel="prefetch" href="/assets/js/7.e0abd3b5.js"><link rel="prefetch" href="/assets/js/70.55a8644a.js"><link rel="prefetch" href="/assets/js/71.899f60b5.js"><link rel="prefetch" href="/assets/js/72.d4776e81.js"><link rel="prefetch" href="/assets/js/73.311f052c.js"><link rel="prefetch" href="/assets/js/74.52e523ab.js"><link rel="prefetch" href="/assets/js/75.4dbc8b3e.js"><link rel="prefetch" href="/assets/js/76.d3f513c3.js"><link rel="prefetch" href="/assets/js/77.e52ac049.js"><link rel="prefetch" href="/assets/js/78.1e016983.js"><link rel="prefetch" href="/assets/js/79.27005b1f.js"><link rel="prefetch" href="/assets/js/8.bf93c1c2.js"><link rel="prefetch" href="/assets/js/80.0af2efa9.js"><link rel="prefetch" href="/assets/js/81.a3f8a909.js"><link rel="prefetch" href="/assets/js/82.8e06e01a.js"><link rel="prefetch" href="/assets/js/83.946584de.js"><link rel="prefetch" href="/assets/js/84.b4e6a347.js"><link rel="prefetch" href="/assets/js/85.9e6cf5d0.js"><link rel="prefetch" href="/assets/js/86.11804cbb.js"><link rel="prefetch" href="/assets/js/87.fae0539a.js"><link rel="prefetch" href="/assets/js/88.97866c02.js"><link rel="prefetch" href="/assets/js/89.25c8b961.js"><link rel="prefetch" href="/assets/js/9.ec799eb2.js"><link rel="prefetch" href="/assets/js/90.04763e9e.js"><link rel="prefetch" href="/assets/js/91.fa8905e8.js"><link rel="prefetch" href="/assets/js/92.07a31bfe.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cdd75a34.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-1aefc0b4><div data-v-1aefc0b4><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1aefc0b4 data-v-1aefc0b4><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-25ba6db2 data-v-1aefc0b4 data-v-1aefc0b4><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>MyBlog</h3> <p class="description" data-v-25ba6db2 data-v-25ba6db2>lpy的个人博客</p> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><span data-v-25ba6db2>lpy</span>
+            
+          <span data-v-25ba6db2>2019 - </span>
+          2022
+        </a></span></div></div> <div class="hide" data-v-1aefc0b4><header class="navbar" data-v-1aefc0b4><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="MyBlog" class="logo"> <span class="site-name">MyBlog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      文章分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/设计模式/" class="nav-link"><i class="undefined"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/redis/" class="nav-link"><i class="undefined"></i>
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/categories/SpringCloud/" class="nav-link"><i class="undefined"></i>
+  SpringCloud
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据库/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JDBC/" class="nav-link"><i class="undefined"></i>
+  JDBC
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaEE/" class="nav-link"><i class="undefined"></i>
+  JavaEE
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Web/" class="nav-link"><i class="undefined"></i>
+  Web
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Maven/" class="nav-link"><i class="undefined"></i>
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Spring/" class="nav-link"><i class="undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Springboot/" class="nav-link"><i class="undefined"></i>
+  Springboot
+</a></li><li class="dropdown-item"><!----> <a href="/categories/elasticsearch/" class="nav-link"><i class="undefined"></i>
+  elasticsearch
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JUC/" class="nav-link"><i class="undefined"></i>
+  JUC
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blogs/" class="nav-link router-link-active"><i class="iconfont reco-message"></i>
+  Java
+</a></div><div class="nav-item"><a href="/docs/category7_SSM.html" class="nav-link"><i class="iconfont reco-message"></i>
+  框架
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      架构
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/jiagou/spirngcloud/" class="nav-link"><i class="undefined"></i>
+  SpirngCloud
+</a></li><li class="dropdown-item"><!----> <a href="/docs/jiagou/weifuwu/" class="nav-link"><i class="undefined"></i>
+  微服务
+</a></li><li class="dropdown-item"><!----> <a href="/docs/jiagou/fenbushi/" class="nav-link"><i class="undefined"></i>
+  分布式
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/code-life/" class="nav-link"><i class="iconfont reco-message"></i>
+  程序人生
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1aefc0b4></div> <aside class="sidebar" data-v-1aefc0b4><div class="personal-info-wrapper" data-v-39576ba9 data-v-1aefc0b4><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-39576ba9> <h3 class="name" data-v-39576ba9>
+    lpy
+  </h3> <div class="num" data-v-39576ba9><div data-v-39576ba9><h3 data-v-39576ba9>81</h3> <h6 data-v-39576ba9>Articles</h6></div> <div data-v-39576ba9><h3 data-v-39576ba9>60</h3> <h6 data-v-39576ba9>Tags</h6></div></div> <ul class="social-links" data-v-39576ba9></ul> <hr data-v-39576ba9></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      文章分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/设计模式/" class="nav-link"><i class="undefined"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/redis/" class="nav-link"><i class="undefined"></i>
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/categories/SpringCloud/" class="nav-link"><i class="undefined"></i>
+  SpringCloud
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据库/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JDBC/" class="nav-link"><i class="undefined"></i>
+  JDBC
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaEE/" class="nav-link"><i class="undefined"></i>
+  JavaEE
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Web/" class="nav-link"><i class="undefined"></i>
+  Web
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Maven/" class="nav-link"><i class="undefined"></i>
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Spring/" class="nav-link"><i class="undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Springboot/" class="nav-link"><i class="undefined"></i>
+  Springboot
+</a></li><li class="dropdown-item"><!----> <a href="/categories/elasticsearch/" class="nav-link"><i class="undefined"></i>
+  elasticsearch
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JUC/" class="nav-link"><i class="undefined"></i>
+  JUC
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blogs/" class="nav-link router-link-active"><i class="iconfont reco-message"></i>
+  Java
+</a></div><div class="nav-item"><a href="/docs/category7_SSM.html" class="nav-link"><i class="iconfont reco-message"></i>
+  框架
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      架构
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/jiagou/spirngcloud/" class="nav-link"><i class="undefined"></i>
+  SpirngCloud
+</a></li><li class="dropdown-item"><!----> <a href="/docs/jiagou/weifuwu/" class="nav-link"><i class="undefined"></i>
+  微服务
+</a></li><li class="dropdown-item"><!----> <a href="/docs/jiagou/fenbushi/" class="nav-link"><i class="undefined"></i>
+  分布式
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/code-life/" class="nav-link"><i class="iconfont reco-message"></i>
+  程序人生
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-25ba6db2 data-v-1aefc0b4><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>ArrayList</h3> <!----> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><span data-v-25ba6db2>lpy</span>
+            
+          <span data-v-25ba6db2>2019 - </span>
+          2022
+        </a></span></div></div> <div data-v-1aefc0b4><main class="page" style="padding-right:0;"><section><div class="page-title"><h1 class="title">ArrayList</h1> <div data-v-f875f3fc><i class="iconfont reco-account" data-v-f875f3fc><span data-v-f875f3fc>lpy</span></i> <i class="iconfont reco-date" data-v-f875f3fc><span data-v-f875f3fc>1/11/2022</span></i> <i class="iconfont reco-eye" data-v-f875f3fc><span id="/blogs/category1_Java/JavaBasics/ArrayList.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-f875f3fc><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="tags iconfont reco-tag" data-v-f875f3fc><span class="tag-item" data-v-f875f3fc>集合</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="arraylist注意事项"><a href="#arraylist注意事项" class="header-anchor">#</a> ArrayList注意事项</h2> <ol><li>permits all elements, including null ,ArrayList 可以加入null,并且多个</li> <li>ArrayList基本等同于Vector，除了 ArrayList是线程不安全(执行效率高)看源码，在多线程情况下，不建议使用ArrayList</li> <li>ArrayList是由数组来实现数据存储的（源码）</li></ol> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ArrayListDetail</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ArrayList</span> arrayList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//1)permits all elements, including null ,ArrayList 可以加入null,并且多个</span>
+        arrayList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        arrayList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arrayList<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//[null, null]</span>
+        <span class="token comment">//2)ArrayList基本等同于Vector，除了 ArrayList是线程不安全(执行效率高)看源码，在多线程情况下，不建议使用ArrayList。</span>
+        <span class="token comment">//  多线程可考虑用Vector</span>
+        <span class="token comment">/*
+        public boolean add(E e) {//ArrayList是线程不安全  没有synchronized
+            ensureCapacityInternal(size + 1);  // Increments modCount!!
+            elementData[size++] = e;
+        return true;
+        }*/</span>
+        <span class="token comment">//3）ArrayList是由数组来实现数据存储的(源码)</span>
+<span class="token comment">//        ArrayList arrayList = new ArrayList();</span>
+<span class="token comment">//        arrayList.add(null);</span>
+<span class="token comment">//        arrayList.add(&quot;jack&quot;);</span>
+<span class="token comment">//        arrayList.add(null);</span>
+<span class="token comment">//        arrayList.add(&quot;lpy&quot;);</span>
+<span class="token comment">//        System.out.println(arrayList);</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><h3 id="arraylist底层操作机制源码分析"><a href="#arraylist底层操作机制源码分析" class="header-anchor">#</a> ArrayList底层操作机制源码分析</h3> <ol><li>ArrayList中维护了一个0bject类型的数组elementData.
+transient Object[] elementData;<br>
+transient 瞬间的，短暂的，表示该属性不会被序列化<br> <img src="/assets/img/arraylist01.b5891f05.png" alt="arraylist01"> <img src="/assets/img/arraylist02.55771608.png" alt="arraylist02"></li> <li>当创建ArrayList对象时，如果使用的是无参构造器，则初始elementData容量为0，第1次添加，则扩容elementData为10，如需要再次扩容，则扩容elementData为1.5倍。</li> <li>如果使用的是指定大小的构造器，则初始elementData容量为指定大小，如果需要扩容, 则直接扩容elementData为1.5倍。</li></ol> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token class-name">ArrayList</span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//使用for循环添加1-10数据</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span><span class="token number">10</span> <span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//使用for循环添加11-15数据</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">11</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span><span class="token number">15</span> <span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Object</span> o <span class="token operator">:</span>list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>o<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h4 id="无参构造器-创建和使用arraylist的源码"><a href="#无参构造器-创建和使用arraylist的源码" class="header-anchor">#</a> 无参构造器，创建和使用ArrayList的源码</h4> <p>（先进行自动装箱）<br>
+创建空的elementData数组<br> <img src="/assets/img/ArrayList1.0fc537db.png" alt="1"><br>
+执行list.add(1.先确认大小，是否要扩容；2.然后再执行赋值<br>
+重点分析ensureCapacityInternal方法<br> <img src="/assets/img/ArrayList2.d2a6a757.png" alt="2"><br>
+该方法确定最小容量minCapacity<br>
+（1）第一次扩容为10<br> <img src="/assets/img/ArrayList3.bc2e8d6b.png" alt="3"><br>
+（1）modCount++ 记录集合被修改的次数  防止多线程操作出现的异常<br>
+（2）如果elementData大小不够，就调用grow（）去扩容<br> <img src="/assets/img/ArrayList4.0e96d2f5.png" alt="4"><br>
+（1）扩容<br>
+（2）使用扩容机制确定扩大多少<br>
+（3）第一次newCapacity = 10<br>
+（4）第二次及以后按照1.5倍扩容（扩容使用的是Arrays.copyOf（），可保留原来的数据）<br> <img src="/assets/img/ArrayList5.6e556eb1.png" alt="5"><br>
+逐层返回到add（）方法<br>
+之后，不再执行 grow（），继续回到add（） 执行<br> <img src="/assets/img/ArrayList6.867227a0.png" alt="6"><br>
+执行到11次时，扩容<br> <img src="/assets/img/ArrayList7.6161044b.png" alt="7"><br>
+开始扩容<br> <img src="/assets/img/ArrayList8.42e39613.png" alt="8"><br>
+回到add（），11放在索引为10的位置<br> <img src="/assets/img/ArrayList9.6270d0ea.png" alt="9"><br></p> <h4 id="arraylist-list-new-arraylist-8"><a href="#arraylist-list-new-arraylist-8" class="header-anchor">#</a> //ArrayList list = new ArrayList(8);</h4> <h4 id="有参构造器-创建和使用arraylist的源码"><a href="#有参构造器-创建和使用arraylist的源码" class="header-anchor">#</a> 有参构造器，创建和使用ArrayList的源码</h4> <p>创建指定大小的elementData数组 this.elementData = new Object[capacity]<br> <img src="/assets/img/ArrayList10.62ff6ce8.png" alt="10"><br> <img src="/assets/img/ArrayList11.3750e06b.png" alt="11"><br> <img src="/assets/img/ArrayList12.558e5502.png" alt="12"><br>
+如果是有参构造器，那么扩容机制<br></p> <ol><li>第一次扩容就按照elementData的1.5倍扩容</li> <li>整个执行流程与无参构造器类似</li></ol></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:0;" data-v-cb1513f6></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.73686183.js" defer></script><script src="/assets/js/4.3efebf8f.js" defer></script><script src="/assets/js/1.8004d325.js" defer></script><script src="/assets/js/11.5bf7944f.js" defer></script>
+  </body>
+</html>

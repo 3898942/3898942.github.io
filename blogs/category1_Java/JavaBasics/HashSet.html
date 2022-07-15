@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HashSet | MyBlog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="lpy的个人博客">
+    
+    <link rel="preload" href="/assets/css/0.styles.cdd75a34.css" as="style"><link rel="preload" href="/assets/js/app.73686183.js" as="script"><link rel="preload" href="/assets/js/4.3efebf8f.js" as="script"><link rel="preload" href="/assets/js/1.8004d325.js" as="script"><link rel="preload" href="/assets/js/21.560cdb07.js" as="script"><link rel="prefetch" href="/assets/js/10.dac11965.js"><link rel="prefetch" href="/assets/js/11.5bf7944f.js"><link rel="prefetch" href="/assets/js/12.76382749.js"><link rel="prefetch" href="/assets/js/13.e84cd943.js"><link rel="prefetch" href="/assets/js/14.05e3b106.js"><link rel="prefetch" href="/assets/js/15.35c528e9.js"><link rel="prefetch" href="/assets/js/16.257c22b4.js"><link rel="prefetch" href="/assets/js/17.1f6cf13f.js"><link rel="prefetch" href="/assets/js/18.1f397961.js"><link rel="prefetch" href="/assets/js/19.0fb9ee73.js"><link rel="prefetch" href="/assets/js/20.4ae90a89.js"><link rel="prefetch" href="/assets/js/22.28a44fd4.js"><link rel="prefetch" href="/assets/js/23.95e91150.js"><link rel="prefetch" href="/assets/js/24.e4e0cf95.js"><link rel="prefetch" href="/assets/js/25.c6be26b1.js"><link rel="prefetch" href="/assets/js/26.4d474441.js"><link rel="prefetch" href="/assets/js/27.eb5c96c7.js"><link rel="prefetch" href="/assets/js/28.a4e3d013.js"><link rel="prefetch" href="/assets/js/29.c2388121.js"><link rel="prefetch" href="/assets/js/3.849d60f4.js"><link rel="prefetch" href="/assets/js/30.412329a4.js"><link rel="prefetch" href="/assets/js/31.c4dd1db2.js"><link rel="prefetch" href="/assets/js/32.b8988104.js"><link rel="prefetch" href="/assets/js/33.3e07657d.js"><link rel="prefetch" href="/assets/js/34.6429f51c.js"><link rel="prefetch" href="/assets/js/35.1557d561.js"><link rel="prefetch" href="/assets/js/36.a9c5e18c.js"><link rel="prefetch" href="/assets/js/37.d540d0fd.js"><link rel="prefetch" href="/assets/js/38.ce0bfafc.js"><link rel="prefetch" href="/assets/js/39.a3c1eacc.js"><link rel="prefetch" href="/assets/js/40.0927b31b.js"><link rel="prefetch" href="/assets/js/41.c3d0786e.js"><link rel="prefetch" href="/assets/js/42.a28d9f8d.js"><link rel="prefetch" href="/assets/js/43.7557d48e.js"><link rel="prefetch" href="/assets/js/44.d3093a6d.js"><link rel="prefetch" href="/assets/js/45.72eb5ebc.js"><link rel="prefetch" href="/assets/js/46.3075d72c.js"><link rel="prefetch" href="/assets/js/47.9ae50afc.js"><link rel="prefetch" href="/assets/js/48.84dc5d72.js"><link rel="prefetch" href="/assets/js/49.1ebead88.js"><link rel="prefetch" href="/assets/js/5.00fd8006.js"><link rel="prefetch" href="/assets/js/50.7a84e8b6.js"><link rel="prefetch" href="/assets/js/51.a6bf4c6d.js"><link rel="prefetch" href="/assets/js/52.ad43e468.js"><link rel="prefetch" href="/assets/js/53.bc115267.js"><link rel="prefetch" href="/assets/js/54.31931485.js"><link rel="prefetch" href="/assets/js/55.af939ae0.js"><link rel="prefetch" href="/assets/js/56.7aa64fb7.js"><link rel="prefetch" href="/assets/js/57.a7a777ed.js"><link rel="prefetch" href="/assets/js/58.25e49533.js"><link rel="prefetch" href="/assets/js/59.fb11d3ac.js"><link rel="prefetch" href="/assets/js/6.70c6e3b6.js"><link rel="prefetch" href="/assets/js/60.a8da3802.js"><link rel="prefetch" href="/assets/js/61.648f0a87.js"><link rel="prefetch" href="/assets/js/62.14bb88a7.js"><link rel="prefetch" href="/assets/js/63.0ea7074f.js"><link rel="prefetch" href="/assets/js/64.f98cfa50.js"><link rel="prefetch" href="/assets/js/65.b46e8138.js"><link rel="prefetch" href="/assets/js/66.725ae391.js"><link rel="prefetch" href="/assets/js/67.3cef4455.js"><link rel="prefetch" href="/assets/js/68.1c4f2ee0.js"><link rel="prefetch" href="/assets/js/69.3d44c45d.js"><link rel="prefetch" href="/assets/js/7.e0abd3b5.js"><link rel="prefetch" href="/assets/js/70.55a8644a.js"><link rel="prefetch" href="/assets/js/71.899f60b5.js"><link rel="prefetch" href="/assets/js/72.d4776e81.js"><link rel="prefetch" href="/assets/js/73.311f052c.js"><link rel="prefetch" href="/assets/js/74.52e523ab.js"><link rel="prefetch" href="/assets/js/75.4dbc8b3e.js"><link rel="prefetch" href="/assets/js/76.d3f513c3.js"><link rel="prefetch" href="/assets/js/77.e52ac049.js"><link rel="prefetch" href="/assets/js/78.1e016983.js"><link rel="prefetch" href="/assets/js/79.27005b1f.js"><link rel="prefetch" href="/assets/js/8.bf93c1c2.js"><link rel="prefetch" href="/assets/js/80.0af2efa9.js"><link rel="prefetch" href="/assets/js/81.a3f8a909.js"><link rel="prefetch" href="/assets/js/82.8e06e01a.js"><link rel="prefetch" href="/assets/js/83.946584de.js"><link rel="prefetch" href="/assets/js/84.b4e6a347.js"><link rel="prefetch" href="/assets/js/85.9e6cf5d0.js"><link rel="prefetch" href="/assets/js/86.11804cbb.js"><link rel="prefetch" href="/assets/js/87.fae0539a.js"><link rel="prefetch" href="/assets/js/88.97866c02.js"><link rel="prefetch" href="/assets/js/89.25c8b961.js"><link rel="prefetch" href="/assets/js/9.ec799eb2.js"><link rel="prefetch" href="/assets/js/90.04763e9e.js"><link rel="prefetch" href="/assets/js/91.fa8905e8.js"><link rel="prefetch" href="/assets/js/92.07a31bfe.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cdd75a34.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-1aefc0b4><div data-v-1aefc0b4><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1aefc0b4 data-v-1aefc0b4><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-25ba6db2 data-v-1aefc0b4 data-v-1aefc0b4><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>MyBlog</h3> <p class="description" data-v-25ba6db2 data-v-25ba6db2>lpy的个人博客</p> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><span data-v-25ba6db2>lpy</span>
+            
+          <span data-v-25ba6db2>2019 - </span>
+          2022
+        </a></span></div></div> <div class="hide" data-v-1aefc0b4><header class="navbar" data-v-1aefc0b4><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="MyBlog" class="logo"> <span class="site-name">MyBlog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      文章分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/设计模式/" class="nav-link"><i class="undefined"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/redis/" class="nav-link"><i class="undefined"></i>
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/categories/SpringCloud/" class="nav-link"><i class="undefined"></i>
+  SpringCloud
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据库/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JDBC/" class="nav-link"><i class="undefined"></i>
+  JDBC
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaEE/" class="nav-link"><i class="undefined"></i>
+  JavaEE
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Web/" class="nav-link"><i class="undefined"></i>
+  Web
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Maven/" class="nav-link"><i class="undefined"></i>
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Spring/" class="nav-link"><i class="undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Springboot/" class="nav-link"><i class="undefined"></i>
+  Springboot
+</a></li><li class="dropdown-item"><!----> <a href="/categories/elasticsearch/" class="nav-link"><i class="undefined"></i>
+  elasticsearch
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JUC/" class="nav-link"><i class="undefined"></i>
+  JUC
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blogs/" class="nav-link router-link-active"><i class="iconfont reco-message"></i>
+  Java
+</a></div><div class="nav-item"><a href="/docs/category7_SSM.html" class="nav-link"><i class="iconfont reco-message"></i>
+  框架
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      架构
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/jiagou/spirngcloud/" class="nav-link"><i class="undefined"></i>
+  SpirngCloud
+</a></li><li class="dropdown-item"><!----> <a href="/docs/jiagou/weifuwu/" class="nav-link"><i class="undefined"></i>
+  微服务
+</a></li><li class="dropdown-item"><!----> <a href="/docs/jiagou/fenbushi/" class="nav-link"><i class="undefined"></i>
+  分布式
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/code-life/" class="nav-link"><i class="iconfont reco-message"></i>
+  程序人生
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1aefc0b4></div> <aside class="sidebar" data-v-1aefc0b4><div class="personal-info-wrapper" data-v-39576ba9 data-v-1aefc0b4><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-39576ba9> <h3 class="name" data-v-39576ba9>
+    lpy
+  </h3> <div class="num" data-v-39576ba9><div data-v-39576ba9><h3 data-v-39576ba9>81</h3> <h6 data-v-39576ba9>Articles</h6></div> <div data-v-39576ba9><h3 data-v-39576ba9>60</h3> <h6 data-v-39576ba9>Tags</h6></div></div> <ul class="social-links" data-v-39576ba9></ul> <hr data-v-39576ba9></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      文章分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/设计模式/" class="nav-link"><i class="undefined"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/redis/" class="nav-link"><i class="undefined"></i>
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/categories/SpringCloud/" class="nav-link"><i class="undefined"></i>
+  SpringCloud
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据库/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JDBC/" class="nav-link"><i class="undefined"></i>
+  JDBC
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaEE/" class="nav-link"><i class="undefined"></i>
+  JavaEE
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Web/" class="nav-link"><i class="undefined"></i>
+  Web
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Maven/" class="nav-link"><i class="undefined"></i>
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Spring/" class="nav-link"><i class="undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Springboot/" class="nav-link"><i class="undefined"></i>
+  Springboot
+</a></li><li class="dropdown-item"><!----> <a href="/categories/elasticsearch/" class="nav-link"><i class="undefined"></i>
+  elasticsearch
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JUC/" class="nav-link"><i class="undefined"></i>
+  JUC
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blogs/" class="nav-link router-link-active"><i class="iconfont reco-message"></i>
+  Java
+</a></div><div class="nav-item"><a href="/docs/category7_SSM.html" class="nav-link"><i class="iconfont reco-message"></i>
+  框架
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      架构
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/jiagou/spirngcloud/" class="nav-link"><i class="undefined"></i>
+  SpirngCloud
+</a></li><li class="dropdown-item"><!----> <a href="/docs/jiagou/weifuwu/" class="nav-link"><i class="undefined"></i>
+  微服务
+</a></li><li class="dropdown-item"><!----> <a href="/docs/jiagou/fenbushi/" class="nav-link"><i class="undefined"></i>
+  分布式
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/code-life/" class="nav-link"><i class="iconfont reco-message"></i>
+  程序人生
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-25ba6db2 data-v-1aefc0b4><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>HashSet</h3> <!----> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><span data-v-25ba6db2>lpy</span>
+            
+          <span data-v-25ba6db2>2019 - </span>
+          2022
+        </a></span></div></div> <div data-v-1aefc0b4><main class="page" style="padding-right:0;"><section><div class="page-title"><h1 class="title">HashSet</h1> <div data-v-f875f3fc><i class="iconfont reco-account" data-v-f875f3fc><span data-v-f875f3fc>lpy</span></i> <i class="iconfont reco-date" data-v-f875f3fc><span data-v-f875f3fc>1/15/2022</span></i> <i class="iconfont reco-eye" data-v-f875f3fc><span id="/blogs/category1_Java/JavaBasics/HashSet.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-f875f3fc><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="tags iconfont reco-tag" data-v-f875f3fc><span class="tag-item" data-v-f875f3fc>集合</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="hashset"><a href="#hashset" class="header-anchor">#</a> HashSet</h2> <ol><li>HashSet实现了Set接口</li> <li>HashSet实际上是HashMap（源码）</li></ol> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HashSet_</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//1.构造器源码</span>
+        <span class="token comment">/*    public HashSet() {
+        //        map = new HashMap&lt;&gt;();
+        //    }
+        */</span>
+        <span class="token comment">//2.HashSet可以存放null，但是只能有以一个null，即元素不能重复</span>
+        <span class="token class-name">HashSet</span> hashSet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hashSet<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//[null]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><ol start="3"><li>可以存放null值，但只能存放一个</li> <li>HashSet不保证元素是有序的，取决于hash后，再确定索引的结果(即不保证存放元素的顺序和取出顺序一致)</li> <li>不能有重复元素/对象，在前面Set接口使用已经讲过
+案例说明<br></li></ol> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HashSet01</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">HashSet</span> hashSet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//在执行add方法后，会返回一个boolean值</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;john&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//t</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;lucy&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//t</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;john&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//f</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;jack&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//t</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;rose&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//t</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hashSet<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//[john, rose, lucy, jack]</span>
+        hashSet<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">&quot;john&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hashSet<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//[rose, lucy, jack]</span>
+
+        hashSet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hashSet<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//[]</span>
+        hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;jack&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//t</span>
+        hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;jack&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//f</span>
+        hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">X</span><span class="token punctuation">(</span><span class="token string">&quot;tom&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">X</span><span class="token punctuation">(</span><span class="token string">&quot;tom&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//可以，与上一个地址不同</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hashSet<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//[X{name='tom'}, X{name='tom'}, jack]</span>
+
+        <span class="token comment">//</span>
+        hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">&quot;lpy&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">&quot;lpy&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hashSet<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//[X{name='tom'}, lpy, X{name='tom'}, jack]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">X</span><span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">X</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;X{&quot;</span> <span class="token operator">+</span>
+                <span class="token string">&quot;name='&quot;</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token char">'\''</span> <span class="token operator">+</span>
+                <span class="token char">'}'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br></div></div><h3 id="hashset底层机制说明"><a href="#hashset底层机制说明" class="header-anchor">#</a> HashSet底层机制说明</h3> <p>分析HashSet底层是HashMap，HashMap底层是（数组+链表+红黑树）</p> <h3 id="模拟链表"><a href="#模拟链表" class="header-anchor">#</a> 模拟链表</h3> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HashSetStructure</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//模拟一个HashMap的底层结构（HashSet的底层是HashMap）</span>
+        <span class="token comment">//1.创建一个数组，数组类型是Node[]</span>
+        <span class="token comment">//2.Node[]数组可称为表</span>
+        <span class="token class-name">Node</span><span class="token punctuation">[</span><span class="token punctuation">]</span> table <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Node</span><span class="token punctuation">[</span><span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>table<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//3.创建结点</span>
+        <span class="token class-name">Node</span> john <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Node</span><span class="token punctuation">(</span><span class="token string">&quot;john&quot;</span><span class="token punctuation">,</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        table<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> john<span class="token punctuation">;</span>
+        <span class="token class-name">Node</span> jack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Node</span><span class="token punctuation">(</span><span class="token string">&quot;jack&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        john<span class="token punctuation">.</span>next <span class="token operator">=</span> jack<span class="token punctuation">;</span><span class="token comment">//将jack的结点挂载到john</span>
+        <span class="token class-name">Node</span> rose <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Node</span><span class="token punctuation">(</span><span class="token string">&quot;rose&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        jack<span class="token punctuation">.</span>next <span class="token operator">=</span> rose<span class="token punctuation">;</span>
+        <span class="token class-name">Node</span> lucy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Node</span><span class="token punctuation">(</span><span class="token string">&quot;lucy&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        table<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> lucy<span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>table<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Node</span><span class="token punctuation">{</span><span class="token comment">//结点，用于存储数据，可指向下一个结点，形成链表</span>
+    <span class="token class-name">Object</span> item<span class="token punctuation">;</span>
+    <span class="token class-name">Node</span> next<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">Node</span><span class="token punctuation">(</span><span class="token class-name">Object</span> item<span class="token punctuation">,</span> <span class="token class-name">Node</span> next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>item <span class="token operator">=</span> item<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>next <span class="token operator">=</span> next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><p><img src="/assets/img/HashSet01.a5cb1a32.png" alt="HashSet01.png"> <img src="/assets/img/HashSet02.0cd9c91d.png" alt="HashSet02.png"></p> <h3 id="hashset的添加元素底层实现-hash-equals"><a href="#hashset的添加元素底层实现-hash-equals" class="header-anchor">#</a> HashSet的添加元素底层实现（hash（）+equals（））</h3> <ol><li>HashSet底层是HashMap</li> <li>添加一个元素时，先得到hash值-&gt;会转成-&gt;索引值</li> <li>找到存储数据表table,看这个索引位置是否已经存放的有元素</li> <li>如果没有，直接加入</li> <li>如果有,调用equals比较，如果相同，就放弃添加，如果不相同，则添加到最后</li> <li>在Java8中，如果一条链表的元素个数超过TREEIFY_THRESHOLD(默认是8)，并且table的大小&gt;=MIN  TREEIFY_CAPACITY(默认64)就会进行树化(红黑树)。</li></ol> <h3 id="源码分析"><a href="#源码分析" class="header-anchor">#</a> 源码分析</h3> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HashSetSource</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">HashSet</span> hashSet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;java&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;php&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;java&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hashSet<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//[java, lpy]</span>
+        <span class="token comment">//HashSet源码分析</span>
+        <span class="token comment">/*
+        1.执行构造器HashSet（）
+        public HashSet() {
+            map = new HashMap&lt;&gt;();
+        }
+        2.执行add（）
+        public boolean add(E e) {// e = &quot;java&quot;
+            return map.put(e, PRESENT)==null;//private static final Object PRESENT = new Object();
+        }
+        3.执行put（）//该方法会执行hash（key）方法，会得到key对应的hash值（不完全等价于hashCode//(h = key.hashCode()) ^ (h &gt;&gt;&gt; 16)//）
+        public V put(K key, V value) {// key = &quot;java&quot;  ,value = &quot;PRESENT&quot;
+            return putVal(hash(key), key, value, false, true);
+        }
+        //————hasj（key）：————
+        static final int hash(Object key) {
+            int h;
+            return (key == null) ? 0 : (h = key.hashCode()) ^ (h &gt;&gt;&gt; 16);
+        }
+        //____________________
+        4.执行putVal
+        final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
+                   boolean evict) {
+            Node&lt;K,V&gt;[] tab; Node&lt;K,V&gt; p; int n, i;//定义辅助变量
+            //table 就是HashMap的一个数组，类型是Node[](table 存放Node结点的数组)
+            //if语句表示如果当前table是null，或者大小=0
+            //就是第一次扩容，到16个空间
+            if ((tab = table) == null || (n = tab.length) == 0)
+                n = (tab = resize()).length;
+                //resize()方法中,执行:
+                //newCap, newThr = 0;
+                //newCap = DEFAULT_INITIAL_CAPACITY;//重新计算空间大小  static final int DEFAULT_INITIAL_CAPACITY = 1 &lt;&lt; 4;
+                （默认大小为16）
+                //newThr = (int)(DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY);//0.75*16=12 临界值计算，用于扩容
+                （当临界值大于12时，进行扩容）
+                //threshold = newThr;//临界值赋给threshold，用于下方判断
+                //table = newTab;将新开辟的空间（16）赋给table
+            //（1）根据key，得到hash去计算该key应该存放到table表的哪个索引位置
+            //并把这个位置的对象，赋给p
+            //（2）判断p 是否为空
+            //1.如果p为空，表示还未存放元素，就创建一个Node（key = &quot;java&quot;,value = PRESENT）
+            //2.就放在该位置tab[i] = newNode(hash, key, value, null);
+            if ((p = tab[i = (n - 1) &amp; hash]) == null)
+                tab[i] = newNode(hash , key , value , null);
+            else {
+                //在需要局部变量（辅助变量）时，再创建
+                Node&lt;K,V&gt; e; K  k;
+                if (p.hash == hash  &amp;&amp;
+                //如果当前索引位置对应的链表的第一个元素和准备填加的key的hash值一样
+                //并且满足 以下两个条件之一
+                //(1)准备加入的key和p指向的Node节点的key是同一个对象
+                //(2)p指向的Node节点的key的equals（）和准备加入的key比较后相同
+                //——————
+                    ((k = p.key) == key || (key != null &amp;&amp; key.equals(k))))
+                    e = p;
+                //——————
+                //再判断p是不是红黑树
+                //如果是红黑树，就调用putTreeVal，进行添加
+                else if (p instanceof TreeNode)
+                    e = ((TreeNode&lt;K,V&gt;)p).putTreeVal(this, tab, hash, key, value);
+                else {//如果table对应索引位置，已经是一个链表，就用for循环比较
+                    //（1）依次比较链表的每一个元素，都不相同，则加入到该链表的最后一个元素。
+                    //注意在把元素添加到链表后，立即判断该链表是否已经达到8，达到就调用treeifyBin（），链表树化（红黑树）
+                    //在进行树化时，需要进行判断
+                    // if (tab == null || (n = tab.length) &lt; MIN_TREEIFY_CAPACITY) //MIN_TREEIFY_CAPACITY = 64
+                    //      resize();
+                    //如果条件成立，扩容；如果不成立，则树化
+                    //（2）如果有相同情况，break
+                    for (int binCount = 0; ; ++binCount) {
+                        if ((e = p.next) == null) {
+                            p.next = newNode(hash, key, value, null);
+                            //TREEIFY_THRESHOLD = 8
+                            if (binCount &gt;= TREEIFY_THRESHOLD - 1) // -1 for 1st
+                                treeifyBin(tab, hash);
+                            break;
+                        }
+                        if (e.hash == hash &amp;&amp;
+                            ((k = e.key) == key || (key != null &amp;&amp; key.equals(k))))
+                            break;
+                        p = e;
+                    }
+                }
+                if (e != null) { // existing mapping for key
+                    V oldValue = e.value;
+                    if (!onlyIfAbsent || oldValue == null)
+                        e.value = value;
+                    afterNodeAccess(e);
+                    return oldValue;
+                }
+            }
+            ++modCount;
+            if (++size &gt; threshold)//超过12（临界值），扩容
+                resize();
+            afterNodeInsertion(evict);
+            return null;
+        }
+        */</span>
+        <span class="token comment">//———————————resize()方法—————————————</span>
+        <span class="token comment">/*
+        final Node&lt;K,V&gt;[] resize() {
+            Node&lt;K,V&gt;[] oldTab = table;
+            int oldCap = (oldTab == null) ? 0 : oldTab.length;
+            int oldThr = threshold;
+            int newCap, newThr = 0;
+            if (oldCap &gt; 0) {
+                if (oldCap &gt;= MAXIMUM_CAPACITY) {
+                    threshold = Integer.MAX_VALUE;
+                    return oldTab;
+                }
+                else if ((newCap = oldCap &lt;&lt; 1) &lt; MAXIMUM_CAPACITY &amp;&amp;
+                         oldCap &gt;= DEFAULT_INITIAL_CAPACITY)
+                    newThr = oldThr &lt;&lt; 1; // double threshold
+            }
+            else if (oldThr &gt; 0) // initial capacity was placed in threshold
+                newCap = oldThr;
+            else {               // zero initial threshold signifies using defaults
+                newCap = DEFAULT_INITIAL_CAPACITY;
+                newThr = (int)(DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY);
+            }
+            if (newThr == 0) {
+                float ft = (float)newCap * loadFactor;
+                newThr = (newCap &lt; MAXIMUM_CAPACITY &amp;&amp; ft &lt; (float)MAXIMUM_CAPACITY ?
+                          (int)ft : Integer.MAX_VALUE);
+            }
+            threshold = newThr;
+            @SuppressWarnings({&quot;rawtypes&quot;,&quot;unchecked&quot;})
+                Node&lt;K,V&gt;[] newTab = (Node&lt;K,V&gt;[])new Node[newCap];
+            table = newTab;
+            if (oldTab != null) {
+                for (int j = 0; j &lt; oldCap; ++j) {
+                    Node&lt;K,V&gt; e;
+                    if ((e = oldTab[j]) != null) {
+                        oldTab[j] = null;
+                        if (e.next == null)
+                            newTab[e.hash &amp; (newCap - 1)] = e;
+                        else if (e instanceof TreeNode)
+                            ((TreeNode&lt;K,V&gt;)e).split(this, newTab, j, oldCap);
+                        else { // preserve order
+                            Node&lt;K,V&gt; loHead = null, loTail = null;
+                            Node&lt;K,V&gt; hiHead = null, hiTail = null;
+                            Node&lt;K,V&gt; next;
+                            do {
+                                next = e.next;
+                                if ((e.hash &amp; oldCap) == 0) {
+                                    if (loTail == null)
+                                        loHead = e;
+                                    else
+                                        loTail.next = e;
+                                    loTail = e;
+                                }
+                                else {
+                                    if (hiTail == null)
+                                        hiHead = e;
+                                    else
+                                        hiTail.next = e;
+                                    hiTail = e;
+                                }
+                            } while ((e = next) != null);
+                            if (loTail != null) {
+                                loTail.next = null;
+                                newTab[j] = loHead;
+                            }
+                            if (hiTail != null) {
+                                hiTail.next = null;
+                                newTab[j + oldCap] = hiHead;
+                            }
+                        }
+                    }
+                }
+            }
+            return newTab;
+        }
+        //————————————————————————————————————————
+        */</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br></div></div><h3 id="分析hashset的扩容和转成红黑树机制"><a href="#分析hashset的扩容和转成红黑树机制" class="header-anchor">#</a> 分析HashSet的扩容和转成红黑树机制</h3> <ol><li>HashSet底层是HashMap,第一次添加时,table数组扩容到16，临界值(threshold)是16*加载因子(loadFactor)是0.75 = 12</li> <li>如果table数组使用到了临界值12,就会扩容到16<em>2=32,新的临界值就是32</em>0.75= 24,依次类推（threshold临界值）</li></ol> <div class="language-java line-numbers-mode"><pre class="language-java"><code>   <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HashSetIncrement</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//1. HashSet底层是HashMap,第一次添加时,table数组扩容到16，临界值(threshold)是16*加载因子(loadFactor)是0.75 = 12</span>
+        <span class="token comment">//2.如果table数组使用到了临界值12,就会扩容到16*2=32,新的临界值就是32*0.75= 24,依次类推</span>
+        <span class="token class-name">HashSet</span> hashSet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//        for (int i = 0; i &lt; 100; i++) {</span>
+        <span class="token comment">//            hashSet.add(i);//1,2,3..100</span>
+        <span class="token comment">//        }</span>
+        <span class="token comment">//3.在Java8中,如果一条链表的元素个数到达 TREEIFY THRESHOLD(默认是8).</span>
+        <span class="token comment">// 并且table的大小&gt;=MIN TREEIFY CAPACITY(默认64),就会进行树化(红黑树)，否则仍然采用数组扩容机制</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">12</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">A</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//equal()不同,且由于重写了hashCode，使hashCode相同（100）</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hashSet<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">A</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> n<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">A</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>n <span class="token operator">=</span> n<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">hashCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">100</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><ol start="3"><li>在Java8中,如果一条链表的元素个数到达 TREEIFY THRESHOLD(默认是8).并且table的大小&gt;=MIN TREEIFY CAPACITY(默认64),就会进行树化(红黑树)，否则仍然采用数组扩容机制
+注：若链表中元素的个数到8，而数组未到64，则按数组容量*2进行扩容，直到扩容到64，再树化。（每添加一次，就会扩容，直到64[源码]）</li></ol> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">if</span> <span class="token punctuation">(</span>p<span class="token punctuation">.</span>hash <span class="token operator">==</span> hash <span class="token operator">&amp;&amp;</span>
+    <span class="token punctuation">(</span><span class="token punctuation">(</span>k <span class="token operator">=</span> p<span class="token punctuation">.</span>key<span class="token punctuation">)</span> <span class="token operator">==</span> key <span class="token operator">||</span> <span class="token punctuation">(</span>key <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> key<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    e <span class="token operator">=</span> p<span class="token punctuation">;</span>
+<span class="token comment">//再判断p是不是红黑树</span>
+<span class="token comment">//如果是红黑树，就调用putTreeVal，进行添加</span>
+<span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>p <span class="token keyword">instanceof</span> <span class="token class-name">TreeNode</span><span class="token punctuation">)</span>
+    e <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">K</span><span class="token punctuation">,</span><span class="token class-name">V</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">)</span>p<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">putTreeVal</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> tab<span class="token punctuation">,</span> hash<span class="token punctuation">,</span> key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">else</span> <span class="token punctuation">{</span><span class="token comment">//如果table对应索引位置，已经是一个链表，就用for循环比较</span>
+<span class="token comment">//（1）依次比较链表的每一个元素，都不相同，则加入到该链表的最后一个元素。</span>
+<span class="token comment">//注意在把元素添加到链表后，立即判断该链表是否已经达到8，达到就调用treeifyBin（），链表树化（红黑树）</span>
+<span class="token comment">//在进行树化时，需要进行判断</span>
+<span class="token comment">/*if (tab == null || (n = tab.length) &lt; MIN_TREEIFY_CAPACITY) 
+	MIN_TREEIFY_CAPACITY = 64
+resize();
+*/</span>
+<span class="token comment">//如果条件成立，扩容；如果不成立，则树化</span>
+<span class="token comment">//（2）如果有相同情况，break</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> binCount <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token punctuation">;</span> <span class="token operator">++</span>binCount<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>e <span class="token operator">=</span> p<span class="token punctuation">.</span>next<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            p<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token function">newNode</span><span class="token punctuation">(</span>hash<span class="token punctuation">,</span> key<span class="token punctuation">,</span> value<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>binCount <span class="token operator">&gt;=</span> TREEIFY_THRESHOLD <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment">// -1 for 1st</span>
+                <span class="token function">treeifyBin</span><span class="token punctuation">(</span>tab<span class="token punctuation">,</span> hash<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>hash <span class="token operator">==</span> hash <span class="token operator">&amp;&amp;</span>
+            <span class="token punctuation">(</span><span class="token punctuation">(</span>k <span class="token operator">=</span> e<span class="token punctuation">.</span>key<span class="token punctuation">)</span> <span class="token operator">==</span> key <span class="token operator">||</span> <span class="token punctuation">(</span>key <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> key<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        p <span class="token operator">=</span> e<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><h3 id="临界值注意"><a href="#临界值注意" class="header-anchor">#</a> 临界值注意</h3> <div class="language-java line-numbers-mode"><pre class="language-java"><code>        <span class="token comment">//当我们向HashSet增加元素时，-&gt;Node-&gt;table,就算增加了一个</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">7</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//table表某一条链表上添加七个对象</span>
+            hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">A</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">7</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//table表另一条链表上添加七个对象</span>
+            hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">B</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">//扩容</span>
+<span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> n<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">A</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>n <span class="token operator">=</span> n<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">hashCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">100</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span>  <span class="token class-name">B</span><span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> n1<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">B</span><span class="token punctuation">(</span><span class="token keyword">int</span> n1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>n1 <span class="token operator">=</span> n1<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">hashCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">200</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br></div></div><h3 id="练习1"><a href="#练习1" class="header-anchor">#</a> 练习1</h3> <p>定义一个Employee类，该类包含:private成员属性name,age要求:<br></p> <ol><li>创建3个Employee对象放入HashSet中</li> <li>当name和age的值相同时,认为是相同员工，不能添加到HashSet集合中</li></ol> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HashSetExercise</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">HashSet</span> hashSet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Employee</span><span class="token punctuation">(</span><span class="token string">&quot;一&quot;</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Employee</span><span class="token punctuation">(</span><span class="token string">&quot;一&quot;</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Employee</span><span class="token punctuation">(</span><span class="token string">&quot;二&quot;</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Employee</span><span class="token punctuation">(</span><span class="token string">&quot;一&quot;</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hashSet<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//[Employee{name='一', age=18}, Employee{name='一', age=20}, Employee{name='二', age=18}]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Employee</span> <span class="token punctuation">{</span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+<span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Employee</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">int</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setAge</span><span class="token punctuation">(</span><span class="token keyword">int</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;Employee{&quot;</span> <span class="token operator">+</span>
+                <span class="token string">&quot;name='&quot;</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token char">'\''</span> <span class="token operator">+</span>
+                <span class="token string">&quot;, age=&quot;</span> <span class="token operator">+</span> age <span class="token operator">+</span>
+                <span class="token char">'}'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//如果name 和 age 值相同，则返回相同的hash值</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">equals</span><span class="token punctuation">(</span><span class="token class-name">Object</span> o<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">==</span> o<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>o <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> <span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> o<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token class-name">Employee</span> employee <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Employee</span><span class="token punctuation">)</span> o<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> age <span class="token operator">==</span> employee<span class="token punctuation">.</span>age <span class="token operator">&amp;&amp;</span> <span class="token class-name">Objects</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> employee<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">hashCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name">Objects</span><span class="token punctuation">.</span><span class="token function">hash</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br></div></div><p><img src="/assets/img/HashSet03.0d3bc0df.png" alt="HashSet03.png"> <img src="/assets/img/HashSet04.7b5e055d.png" alt="HashSet04.png"></p> <h3 id="练习2"><a href="#练习2" class="header-anchor">#</a> 练习2</h3> <p>(待定)<br></p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HashSetExercise02</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">HashSet</span> hashSet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Employee2</span><span class="token punctuation">(</span><span class="token string">&quot;一&quot;</span><span class="token punctuation">,</span><span class="token number">1000.1</span><span class="token punctuation">,</span><span class="token keyword">new</span> <span class="token class-name">Mydate</span><span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Employee2</span><span class="token punctuation">(</span><span class="token string">&quot;一&quot;</span><span class="token punctuation">,</span><span class="token number">1000.1</span><span class="token punctuation">,</span><span class="token keyword">new</span> <span class="token class-name">Mydate</span><span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        hashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Employee2</span><span class="token punctuation">(</span><span class="token string">&quot;二&quot;</span><span class="token punctuation">,</span><span class="token number">2000.1</span><span class="token punctuation">,</span><span class="token keyword">new</span> <span class="token class-name">Mydate</span><span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hashSet<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Employee2</span><span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">double</span> sal<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Mydate</span> num<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Employee2</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">double</span> sal<span class="token punctuation">,</span> <span class="token class-name">Mydate</span> num<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>sal <span class="token operator">=</span> sal<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>num <span class="token operator">=</span> num<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">double</span> <span class="token function">getSal</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> sal<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setSal</span><span class="token punctuation">(</span><span class="token keyword">double</span> sal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>sal <span class="token operator">=</span> sal<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Mydate</span> <span class="token function">getNum</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> num<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setNum</span><span class="token punctuation">(</span><span class="token class-name">Mydate</span> num<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>num <span class="token operator">=</span> num<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">equals</span><span class="token punctuation">(</span><span class="token class-name">Object</span> o<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">==</span> o<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>o <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> <span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> o<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token class-name">Employee2</span> employee2 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Employee2</span><span class="token punctuation">)</span> o<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token class-name">Objects</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> employee2<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token class-name">Objects</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>num<span class="token punctuation">,</span> employee2<span class="token punctuation">.</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">hashCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name">Objects</span><span class="token punctuation">.</span><span class="token function">hash</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;Employee2{&quot;</span> <span class="token operator">+</span>
+                <span class="token string">&quot;name='&quot;</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token char">'\''</span> <span class="token operator">+</span>
+                <span class="token string">&quot;, sal=&quot;</span> <span class="token operator">+</span> sal <span class="token operator">+</span>
+                <span class="token string">&quot;, num=&quot;</span> <span class="token operator">+</span> num <span class="token operator">+</span>
+                <span class="token char">'}'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Mydate</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> year<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> month<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> day<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Mydate</span><span class="token punctuation">(</span><span class="token keyword">int</span> year<span class="token punctuation">,</span> <span class="token keyword">int</span> month<span class="token punctuation">,</span> <span class="token keyword">int</span> day<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>year <span class="token operator">=</span> year<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>month <span class="token operator">=</span> month<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>day <span class="token operator">=</span> day<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">equals</span><span class="token punctuation">(</span><span class="token class-name">Object</span> o<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">==</span> o<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>o <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> <span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> o<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token class-name">Mydate</span> mydate <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Mydate</span><span class="token punctuation">)</span> o<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> year <span class="token operator">==</span> mydate<span class="token punctuation">.</span>year <span class="token operator">&amp;&amp;</span> month <span class="token operator">==</span> mydate<span class="token punctuation">.</span>month <span class="token operator">&amp;&amp;</span> day <span class="token operator">==</span> mydate<span class="token punctuation">.</span>day<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">hashCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name">Objects</span><span class="token punctuation">.</span><span class="token function">hash</span><span class="token punctuation">(</span>year<span class="token punctuation">,</span> month<span class="token punctuation">,</span> day<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> year<span class="token operator">+</span><span class="token string">&quot;-&quot;</span><span class="token operator">+</span>month<span class="token operator">+</span><span class="token string">&quot;-&quot;</span><span class="token operator">+</span>day<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br></div></div></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:0;" data-v-cb1513f6></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.73686183.js" defer></script><script src="/assets/js/4.3efebf8f.js" defer></script><script src="/assets/js/1.8004d325.js" defer></script><script src="/assets/js/21.560cdb07.js" defer></script>
+  </body>
+</html>
